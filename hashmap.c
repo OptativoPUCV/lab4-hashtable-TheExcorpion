@@ -60,7 +60,7 @@ HashMap * createMap(long capacity)
     return NULL;
   }
   //Reservar memoria para almacenar datos de cada bucket
-  map->buckets (Pair *)calloc(capacity,sizeof(Pair*));
+  map->buckets (Pair**)calloc(capacity,sizeof(Pair*));
   if(map->buckets == NULL)
   {
     free(map);

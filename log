@@ -19,3 +19,20 @@ hashmap.c:63:24: error: expected ‘;’ before ‘calloc’
       |                        ;
 Compilation failed
 6061d92
+Thu 25 Apr 2024 04:06:49 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:17: error: expected expression before ‘Pair’
+   63 |   map->buckets (Pair**)calloc(capacity,sizeof(Pair*));
+      |                 ^~~~
+hashmap.c:63:3: error: called object is not a function or function pointer
+   63 |   map->buckets (Pair**)calloc(capacity,sizeof(Pair*));
+      |   ^~~
+hashmap.c:63:24: error: expected ‘;’ before ‘calloc’
+   63 |   map->buckets (Pair**)calloc(capacity,sizeof(Pair*));
+      |                        ^~~~~~
+      |                        ;
+Compilation failed
+b0d8f1c
