@@ -60,7 +60,7 @@ HashMap * createMap(long capacity)
     return NULL;
   }
   //Reservar memoria para almacenar datos de cada bucket
-  map->buckets = (HashNode **)calloc(capacity, sizeof(HashNode *));
+  map->buckets = (HashMap **)calloc(capacity, sizeof(HashMap *));
 
   if(map->buckets == NULL)
   {

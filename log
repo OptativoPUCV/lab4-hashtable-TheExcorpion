@@ -50,3 +50,14 @@ hashmap.c:63:30: error: expected expression before ‘)’ token
       |                              ^
 Compilation failed
 e818bd6
+Thu 25 Apr 2024 04:08:19 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘HashMap **’ {aka ‘struct HashMap **’} [-Werror=incompatible-pointer-types]
+   63 |   map->buckets = (HashMap **)calloc(capacity, sizeof(HashMap *));
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+55b7221
