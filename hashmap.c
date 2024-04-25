@@ -51,9 +51,25 @@ void enlarge(HashMap * map) {
 }
 
 
-HashMap * createMap(long capacity) {
-
+HashMap * createMap(long capacity) 
+{
+  //Reservar memoria para almanecar mapa hash y sus datos
+  HashMap *map = (HashMap *) malloc (sizeof(HashMap));
+  if(map == NULL)
+  {
     return NULL;
+  }
+  //Reservar memoria para almacenar datos de cada bucket
+  map->buckets (Pair *)calloc(capacity,sizeof(Pair*));
+  if(map->buckets == NULL)
+  {
+    free(map);
+    return NULL;
+  }
+  map->size = 0;
+  map->capacity = capacity;
+  map->current = -1;
+  return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    

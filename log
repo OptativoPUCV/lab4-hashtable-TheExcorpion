@@ -2,3 +2,20 @@ Thu 25 Apr 2024 03:33:00 PM UTC:
  tests:  0|6
 total_score: 0/70
 881541c
+Thu 25 Apr 2024 04:06:32 PM UTC: 
+ hashmap.c | 20 ++++++++++++++++++--
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:17: error: expected expression before ‘Pair’
+   63 |   map->buckets (Pair *)calloc(capacity,sizeof(Pair*));
+      |                 ^~~~
+hashmap.c:63:3: error: called object is not a function or function pointer
+   63 |   map->buckets (Pair *)calloc(capacity,sizeof(Pair*));
+      |   ^~~
+hashmap.c:63:24: error: expected ‘;’ before ‘calloc’
+   63 |   map->buckets (Pair *)calloc(capacity,sizeof(Pair*));
+      |                        ^~~~~~
+      |                        ;
+Compilation failed
+6061d92
