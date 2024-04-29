@@ -79,3 +79,12 @@ Mon 29 Apr 2024 02:08:52 AM UTC:
  tests:  5|4
 total_score: 30/70
 ac87a2b
+Mon 29 Apr 2024 02:31:38 AM UTC: 
+ hashmap.c | 26 +++++++++++++++++++++-----
+ 1 file changed, 21 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c:124:1: error: expected ‘;’, ‘,’ or ‘)’ before ‘{’ token
+  124 | {
+      | ^
+Compilation failed
+75e2455
