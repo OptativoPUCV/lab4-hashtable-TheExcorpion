@@ -111,3 +111,14 @@ hashmap.c:159:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 1de756d
+Mon 29 Apr 2024 02:50:26 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:159:1: error: control reaches end of non-void function [-Werror=return-type]
+  159 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+32a8af8
